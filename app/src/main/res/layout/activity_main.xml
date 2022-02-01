@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressbar_1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="70" />
+
+    <Button
+        android:id="@+id/iniciar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="INICIAR"
+        app:layout_constraintBottom_toBottomOf="@+id/pausar_1"
+        app:layout_constraintEnd_toStartOf="@+id/pausar_1"
+        app:layout_constraintTop_toTopOf="@+id/pausar_1" />
+
+    <Button
+        android:id="@+id/pausar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:text="PAUSAR"
+        app:layout_constraintEnd_toEndOf="@+id/progressbar_1"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/progressbar_1"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar_1" />
+
+    <Button
+        android:id="@+id/detener_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:enabled="false"
+        android:text="DETENER"
+        app:layout_constraintBottom_toBottomOf="@+id/pausar_1"
+        app:layout_constraintStart_toEndOf="@+id/pausar_1"
+        app:layout_constraintTop_toTopOf="@+id/pausar_1" />
+
+
+    <ProgressBar
+        android:id="@+id/progressbar_2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pausar_1"
+        tools:progress="70" />
+
+    <Button
+        android:id="@+id/iniciar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="INICIAR"
+        app:layout_constraintBottom_toBottomOf="@+id/pausar_2"
+        app:layout_constraintEnd_toStartOf="@+id/pausar_2"
+        app:layout_constraintTop_toTopOf="@+id/pausar_2" />
+
+    <Button
+        android:id="@+id/pausar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:text="PAUSAR"
+        app:layout_constraintEnd_toEndOf="@+id/progressbar_2"
+        app:layout_constraintStart_toStartOf="@+id/progressbar_2"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar_2" />
+
+    <Button
+        android:id="@+id/detener_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:enabled="false"
+        android:text="DETENER"
+        app:layout_constraintBottom_toBottomOf="@+id/pausar_2"
+        app:layout_constraintStart_toEndOf="@+id/pausar_2"
+        app:layout_constraintTop_toTopOf="@+id/pausar_2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
