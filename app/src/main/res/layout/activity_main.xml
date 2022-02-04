@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:max="1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -57,10 +58,11 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="60dp"
+        android:max="1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pausar_1"
+        app:layout_constraintTop_toBottomOf="@+id/reset_1"
         tools:progress="70" />
 
     <Button
@@ -94,6 +96,28 @@
         app:layout_constraintBottom_toBottomOf="@+id/pausar_2"
         app:layout_constraintStart_toEndOf="@+id/pausar_2"
         app:layout_constraintTop_toTopOf="@+id/pausar_2" />
+
+    <Button
+        android:id="@+id/reset_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="RESET"
+        app:layout_constraintEnd_toEndOf="@+id/pausar_1"
+        app:layout_constraintStart_toStartOf="@+id/pausar_1"
+        app:layout_constraintTop_toBottomOf="@+id/pausar_1" />
+
+    <Button
+        android:id="@+id/reset_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="RESET"
+        app:layout_constraintEnd_toEndOf="@+id/pausar_2"
+        app:layout_constraintStart_toStartOf="@+id/pausar_2"
+        app:layout_constraintTop_toBottomOf="@+id/pausar_2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

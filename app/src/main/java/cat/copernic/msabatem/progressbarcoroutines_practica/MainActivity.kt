@@ -49,6 +49,13 @@ class MainActivity : AppCompatActivity() {
             estado_1 = DETENIDA;
             findViewById<Button>(R.id.pausar_1).isEnabled = false;
             it.isEnabled = false;
+            findViewById<Button>(R.id.reset_1).isEnabled = true;
+        }
+        findViewById<Button>(R.id.reset_1).setOnClickListener {
+            estado_1 = SIN_INICIAR;
+            findViewById<Button>(R.id.reset_1).isEnabled = false;
+            findViewById<Button>(R.id.iniciar_1).isEnabled = true;
+            progressBar_1.progress = 0;
         }
 
         //SEGUNDA PROGRESS BAR
@@ -76,6 +83,13 @@ class MainActivity : AppCompatActivity() {
             estado_2 = DETENIDA;
             findViewById<Button>(R.id.pausar_2).isEnabled = false;
             it.isEnabled = false;
+            findViewById<Button>(R.id.reset_2).isEnabled = true;
+        }
+        findViewById<Button>(R.id.reset_2).setOnClickListener {
+            estado_2 = SIN_INICIAR;
+            findViewById<Button>(R.id.reset_2).isEnabled = false;
+            findViewById<Button>(R.id.iniciar_2).isEnabled = true;
+            progressBar_2.progress = 0;
         }
 
 
@@ -102,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //progress(progressBar_1)
-            delay(300);
+            delay(TIME_WAIT);
             }
 
         }
@@ -111,9 +125,9 @@ class MainActivity : AppCompatActivity() {
     private suspend fun progress(progressBar: ProgressBar) {
 
         progressBar.incrementProgressBy(PROGRESS_INCREMENT)
-        if(progressBar.progress >= progressBar.max){
+        /*if(progressBar.progress >= progressBar.max){
             progressBar.progress = 0
-        }
+        }*/
 
     }
 
@@ -123,7 +137,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val PROGRESS_INCREMENT = 5
+        const val PROGRESS_INCREMENT = 1
+        const val TIME_WAIT = 10L;
 
         const val SIN_INICIAR = 0;
         const val CORRIENDO = 1;
